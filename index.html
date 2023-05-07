@@ -63,8 +63,8 @@ body > footer {
           </hgroup>
           <form id="login-form">
             <input type="text" id="username" name="username" placeholder="Login" aria-label="Login" autocomplete="nickname" required>
-            <input type="password" id = "password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required>
-            <button id="submit" type="submit" class="contrast"><a href="/adp/portfolio">Login</button>
+            <input type="password" id = "password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required> 
+            <button id="submit" type="submit" class="contrast"onclick="redirectFun()";>Login</button>
           </form>
         </div>
         <div>
@@ -83,6 +83,11 @@ body > footer {
       })
 
     </script>
+    <script type="text/javascript">
+      function redirectFun(){
+          setTimeout(function () { window.location = "/adp/portfolio/" }, 1);
+      };
+      </script>      
     <script>
       var canvas = document.querySelector('canvas'),
   ctx = canvas.getContext('2d');
