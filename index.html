@@ -64,7 +64,7 @@ body > footer {
           <form id="login-form">
             <input type="text" id="username" name="username" placeholder="Login" aria-label="Login" autocomplete="nickname" required>
             <input type="password" id = "password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required> 
-            <button id="submit" type="submit" class="contrast"onclick="redirectFun()";>Login</button>
+            <button id="submit" type="submit" class="contrast" onclick="redirectFun()";>Login</button>
           </form>
         </div>
         <div>
@@ -79,13 +79,18 @@ body > footer {
           event.preventDefault();
           console.log("yes")
           alert("incorrect username or password!");
+          flag = 1
+        }
+        else{
+          flag = 0
         }
       })
 
     </script>
     <script type="text/javascript">
       function redirectFun(){
-          setTimeout(function () { window.location = "/adp/portfolio/" }, 1);
+          setTimeout(function () 
+          { if(flag==0){window.location = "/adp/portfolio/"} }, 1);
       };
       </script>      
     <script>
